@@ -22,7 +22,7 @@ First we set the parameters.
 **IMPORTANT NOTE: Since creating a Word Flag matrix can take a nontrivial amount of time for larger corpuses, this script is designed only to run the program to create a new PopSciWordFlagdf if there is a change to the dataset in folder "Documents" or if the previous PopSciWordFlagdf has been deleted.**
 
 ```{r,  eval=FALSE}
-    PopScilocation <- paste0(getwd(),"/Applications/Victorian-Popular-Science")
+    PopScilocation <- paste0(getwd())
     PopScidoclocation <- paste0(PopScilocation,"/Documents")
     PopScilongconlength <- 250
     PopScishortconlength <- 3
@@ -30,7 +30,7 @@ First we set the parameters.
     PopSciplaysearchedtermlist <- c("play", "player", "recreation")
     PopSciworksearchedtermlist <- c("work", "worker","labor")
     PopScisearchedtermlist <- c(PopSciplaysearchedtermlist,PopSciworksearchedtermlist)
-    PopScioutputlocation <- PopScilocation
+    PopScioutputlocation <- paste0(getwd(),"/WordFlagDataFrames")
     PopSciWordFlagdfPath <- paste0(PopScioutputlocation,"/","PopSciWordFlagdf.txt")
     PopSciDocumentSize <- 152896399
 ```
